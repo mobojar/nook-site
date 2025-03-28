@@ -161,13 +161,13 @@ export default function Home() {
                 life.
               </h2>
               <div className="sectionText">
-                <p>
+                <p className="me-5">
                   We&apos;ve all tried to improve our well-being. But we know
                   it&apos;s not always as easy as it seems, and we can do with a
                   bit of help, in the comfort of our Nook, our own little corner
                   of the world.
                 </p>
-                <p>
+                <p className="me-3">
                   Nook is a science based solution. That&apos;s a given. But we
                   are more than that. We know it&apos;s hard to watch yet
                   another meditation video, and just listening to sleep stories
