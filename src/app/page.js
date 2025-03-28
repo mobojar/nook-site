@@ -121,12 +121,12 @@ export default function Home() {
               </h2>
               <div className="sectionText">
                 <p>
-                  We've all tried to improve our well-being. But we know it's not always as easy as it seems, and we can do
+                  We&apos;ve all tried to improve our well-being. But we know it&apos;s not always as easy as it seems, and we can do
                   with a bit of help, in the comfort of our Nook, our own little corner of the world.
                 </p>
                 <p>
-                  Nook is a science based solution. That's a given. But we are more than that. We know it's hard to watch yet
-                  another meditation video, and just listening to sleep stories doesn't help all aspects of our well being. We
+                  Nook is a science based solution. That&apos;s a given. But we are more than that. We know it&apos;s hard to watch yet
+                  another meditation video, and just listening to sleep stories doesn&apos;t help all aspects of our well being. We
                   know, that to improve, you first have to understand. Our focus is on educating you on you. To increase your
                   awareness of yourself in a way, that driving improvements becomes easy.
                 </p>
@@ -240,7 +240,7 @@ export default function Home() {
                         <input className="form-control fw-bold" type="text" placeholder="Country" />
                       </div>
                       <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" type="submit" className="submitBtn text-decoration-none" >
-                        <span className="me-2">Let's get started</span>
+                        <span className="me-2">Let&apos;s get started</span>
                         <i className="bi bi-box-arrow-right fs-5"></i>
                       </a>
                     </form>
