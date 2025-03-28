@@ -594,12 +594,12 @@
   
   .contact-icon {
     color: #777;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-top: 2px;
     background-color: rgb(209, 204, 204);
-    border-radius: 50%;
-    padding: 8px;
   }
+
+
   
   .contact-text {
     display: flex;
@@ -740,22 +740,7 @@
     }
   }
   
-  /* @media (max-width: 768px) {
-   
-  
-    .brainIcon {
-      display: none;
-    }
-  
-    .footerBottom {
-      flex-direction: column;
-      gap: 15px;
-      text-align: center;
 
-    }
-  
-
-  } */
   
   @media (max-width: 576px) {
     .heroTitle {
@@ -798,6 +783,13 @@
   
     .logoItem {
       flex: 0 0 120px;
+    }
+  }
+
+  @media (min-width: 991.98px) and (max-width: 1480px) {
+    .container-footer {
+      padding-right: 5em;
+      padding-left: 5em;
     }
   }
   
