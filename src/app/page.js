@@ -1,95 +1,356 @@
+"use client"
+import "./styles/Home.css";
+import Link from "next/link";
 import Image from "next/image";
-import styles from "./page.module.css";
+import Slider from "react-slick";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 4000,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
+  return (
+    <>
+      <nav className="navbar navbar-expand-lg fixed-top">
+        <div className="container-fluid">
+          <div className="row w-100 justify-content-center">
+            <div className="col-12 col-lg-9 col-xl-8">
+              <div className="d-flex navbar-container shadow-lg px-4 py-4 bg-white">
+                <Link href="/" className="logoLink mt-1 ps-3">
+                  <Image src="/images/nook-logo.png" alt="nook Logo" className="logo" height={100} width={100} />
+                </Link>
+                <button
+                  className="navbar-toggler ms-auto"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav"
+                >
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                  <ul className="navbar-nav me-auto ms-5">
+                    <li className="nav-item fw-bold">
+                      <Link href="#what-we-do" className="nav-link" style={{ color: "#5E5CE6" }}>
+                        What we do
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link href="#contact-us" className="nav-link text-black fw-semibold">
+                        Contact Us
+                      </Link>
+                    </li>
+                  </ul>
+                  <button className="loginBtn d-flex align-items-center">
+                    <span className="me-2">Contact Us</span>
+                    <i className="bi bi-box-arrow-right fs-5"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </nav>
+
+
+      {/* Hero Section */}
+      <section className="hero w-100">
+        <div className="heroContent">
+          <h3 className="heroTitle">
+            Find <span className="highlight">peace</span> in your nook.
+            <div className="brainIcon">
+              <Image src="/images/brain-icon.png" alt="Brain Icon" width={100} height={100} />
+            </div>
+          </h3>
+
+          <p className="heroSubtitle">
+            A science-based well-being solution to help you navigate life and work with confidence and peace.
+          </p>
+          <Link href="#contact-us">
+
+            <button className="contactBtn">
+              <span className="me-2">Contact Us</span>
+              <i className="bi bi-box-arrow-right fs-5"></i>
+            </button>
+          </Link>
+        </div>
+
+      </section>
+
+
+      <section className="bestSelf">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-7 bestSelf-content p-5">
+              <h2 className="sectionTitle">
+                Everyone deserves to be <span className="purple">their best self</span> at work and in life.
+              </h2>
+              <div className="sectionText">
+                <p>
+                  We've all tried to improve our well-being. But we know it's not always as easy as it seems, and we can do
+                  with a bit of help, in the comfort of our Nook, our own little corner of the world.
+                </p>
+                <p>
+                  Nook is a science based solution. That's a given. But we are more than that. We know it's hard to watch yet
+                  another meditation video, and just listening to sleep stories doesn't help all aspects of our well being. We
+                  know, that to improve, you first have to understand. Our focus is on educating you on you. To increase your
+                  awareness of yourself in a way, that driving improvements becomes easy.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-5">
+              <div className="image-gallery">
+                <div className="gallery-main">
+                  <Image
+                    src="/images/mountain-hiker.png"
+                    alt="Person hiking on mountain"
+                    className="gallery-image"
+                    width={800}
+                    height={600}
+                    priority
+                  />
+                </div>
+                <div className="gallery-secondary">
+                  <div className="gallery-top">
+                    <Image
+                      src="/images/beach-meditation.png"
+                      alt="Person meditating on beach"
+                      className="gallery-image"
+                      width={500}
+                      height={350}
+                    />
+                  </div>
+                  <div className="gallery-bottom">
+                    <Image
+                      src="/images/yoga-pose.png"
+                      alt="Person in yoga pose"
+                      className="gallery-image"
+                      width={500}
+                      height={350}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Customers Section */}
+
+      <section className="customers">
+        <div className="container">
+          <div className="customerHeading">
+            <div className="brainIconSmall">
+              <Image className="img-fluid" src="/images/brain-two-icon.png" alt="Brain Icon" width={75} height={100} />
+            </div>
+            <h2 className="mt-5 fw-bold">Nook customers come from</h2>
+          </div>
+          <div className="">
+            <Slider {...settings}>
+              <div className="">
+                <Image className="img-fluid" src="/images/amazon-logo.png" alt="Amazon" width={250} height={200} />
+
+              </div>
+              <div className="">
+                <Image className="img-fluid" src="/images/google-logo.png" alt="Google" width={250} height={200} />
+              </div>
+              <div className="">
+                <Image className="img-fluid" src="/images/netflix-logo.png" alt="Netflix" width={250} height={200} />
+              </div>
+              <div className="">
+                <Image className="img-fluid" src="/images/mckinsey-logo.png" alt="McKinsey" width={250} height={200} />
+              </div>
+              <div className="">
+                <Image className="img-fluid" src="/images/nhs-logo.png" alt="NHS" width={250} height={200} />
+              </div>
+              <div className="">
+                <Image className="img-fluid" src="/images/cisco-logo.png" alt="Cisco" width={250} height={200} />
+              </div>
+            </Slider>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact-us" className="contact">
+
+        <div className="contact-bg-wrapper">
+          <div className="container position-relative">
+            <div className="card p-4 border-0 z-1">
+              <div className="card-body">
+                <div className="row">
+
+                  <div className="col-lg-6">
+
+
+                    <h2 className="contactTitle">
+                      Contact us to <span className="purple">get started</span>
+                    </h2>
+                    <form className="contactForm">
+                      <div className="formGroup">
+                        <input className="form-control fw-bold" type="text" placeholder="Name*" required />
+                      </div>
+                      <div className="formGroup">
+                        <input className="form-control fw-bold" type="email" placeholder="Email*" required />
+                      </div>
+                      <div className="formGroup">
+                        <input className="form-control fw-bold" type="tel" placeholder="Contact number*" required />
+                      </div>
+                      <div className="formGroup">
+                        <input className="form-control fw-bold" type="text" placeholder="Company name" />
+                      </div>
+                      <div className="formGroup">
+                        <input className="form-control fw-bold" type="text" placeholder="Country" />
+                      </div>
+                      <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" type="submit" className="submitBtn text-decoration-none" >
+                        <span className="me-2">Let's get started</span>
+                        <i className="bi bi-box-arrow-right fs-5"></i>
+                      </a>
+                    </form>
+
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="contactImage">
+                      <Image className="img-fluid" src="/images/reading-woman.png" alt="Woman reading a book" width={600}
+                        height={600} />
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <section className="newsletter">
+        <div className="container position-relative">
+          <div className="newsletter-content text-center">
+            <h2 className="newsletterTitle  fw-bold">
+              <span className="purple">Join our newsletter</span> for <br /> tips on well-being.
+            </h2>
+            <button className="subscribeBtn" >
+
+              <span className="me-2">Subscribe </span>
+              <i className="bi bi-box-arrow-right fs-5"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+
+      <footer className="footer">
+        <div className="container-footer position-relative">
+          <div className="footer-bg-image"></div>
+          <hr className="footer-divider" />
+
+          <div className="footer-main">
+            <div className="socialIcons">
+              <Link href="https://x.com/?lang=en" target="_blank" className="socialIcon">
+                <Image src="/images/icon-x.png" alt="X" width={16} height={16} />
+              </Link>
+              <Link href="https://www.linkedin.com/" target="_blank" className="socialIcon">
+                <Image src="/images/icon-linkedin.png" alt="LinkedIn" width={16} height={16} />
+              </Link>
+              <Link href="https://www.facebook.com/" target="_blank" className="socialIcon">
+                <Image src="/images/icon-facebook.png" alt="Facebook" width={16} height={16} />
+              </Link>
+              <Link href="https://www.instagram.com/" target="_blank" className="socialIcon">
+                <Image src="/images/icon-instagram.png" alt="Instagram" width={16} height={16} />
+              </Link>
+              <Link href="https://www.youtube.com/" target="_blank" className="socialIcon">
+                <Image src="/images/icon-youtube.png" alt="YouTube" width={16} height={16} />
+              </Link>
+            </div>
+
+            <div className="contactInfo">
+              <div className="contactItem">
+                <div className="contact-icon">
+                  <i className="bi bi-telephone-fill text-dark"></i>
+                </div>
+                <div className="contact-text">
+                  <span >Call</span>
+                  <p className="text-black fw-semibold">000-000-0000</p>
+                </div>
+              </div>
+
+              <div className="contactItem">
+                <div className="contact-icon">
+                  <i className="bi bi-envelope-fill text-dark"></i>
+                </div>
+                <div className="contact-text">
+                  <span>Email</span>
+                  <p className="text-black fw-semibold">Email@nook.com</p>
+                </div>
+              </div>
+
+              <div className="contactItem">
+                <div className="contact-icon">
+                  <i className="bi bi-geo-alt-fill text-dark"></i>
+                </div>
+                <div className="contact-text">
+                  <span>Address</span>
+                  <p className="text-black fw-semibold">000 Newbury St, 6th Floor,Boston, MA 00000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr className="footer-divider" />
+
+          <div className="footerBottom">
+            <p className="text-dark fw-semibold">© 2024 nook. All rights reserved.</p>
+            <div className="footerLinks">
+              <Link href="#" className="text-dark fw-semibold"> <u>Privacy Policy</u> </Link>
+              <Link href="#" className="text-dark fw-semibold"> <u>Terms of Service</u> </Link>
+              <Link href="#" className="text-dark fw-semibold"> <u> Cookies Settings</u></Link>
+            </div>
+          </div>
+        </div>
       </footer>
-    </div>
-  );
+    </>
+  )
 }
+
