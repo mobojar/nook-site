@@ -1,0 +1,156 @@
+.subscribe-modal .modal-content {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .modal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .subscribe-modal .modal-header {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn-close-custom {
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-close-custom:hover {
+    background-color: #f3f4f6;
+    color: #374151;
+  }
+  
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .icon-circle::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+  }
+  
+  .bell-icon {
+    animation: bell 5s ease-in-out infinite;
+    transform-origin: top center;
+  }
+  
+  .form-floating > .form-control {
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem 0.75rem;
+    height: calc(3.5rem + 2px);
+    transition: all 0.2s ease;
+  }
+  
+  .form-floating > .form-control:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.25);
+  }
+  
+  .btn-subscribe {
+    background: linear-gradient(to right, #f59e0b, #f97316);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-subscribe:hover {
+    background: linear-gradient(to right, #d97706, #ea580c);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+  }
+  
+  .btn-subscribe.btn-success {
+    background: linear-gradient(to right, #10b981, #059669);
+  }
+  
+  .btn-link-custom {
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #545964;
+  }
+  
+  .btn-link-custom:hover {
+    color: #374151;
+    text-decoration: underline;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes bell {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    1%,
+    9% {
+      transform: rotate(15deg);
+    }
+    3%,
+    7% {
+      transform: rotate(-15deg);
+    }
+    5% {
+      transform: rotate(15deg);
+    }
+  }
+  
+  
