@@ -2,11 +2,11 @@
 import "./styles/Home.css";
 import Link from "next/link";
 import Image from "next/image";
-import Slider from "react-slick";
 import { useState } from "react";
+import Slider from "react-slick";
+import SubscibeModal from "./Modals/SubscibeModal";
 
 export default function Home() {
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,19 +15,18 @@ export default function Home() {
     country: "",
   });
 
+  const [showSubscribeModal, setShowSubscribeModal] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleEmail = () => {
     const { name, email, contact, company, country } = formData;
-  
-    // Construct email body
+
     const emailBody = `${name}%0D%0A${email}%0D%0A${contact}%0D%0A${company}%0D%0A${country}`;
-  
-    // Gmail compose link
+
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=Contact@yournook.org&su=Inquiry&body=${emailBody}`;
-  
-    // Open in new tab
+
     window.open(gmailUrl, "_blank");
   };
   var settings = {
@@ -39,6 +38,7 @@ export default function Home() {
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 4000,
+    arrows: false,
     cssEase: "linear",
     responsive: [
       {
@@ -70,7 +70,7 @@ export default function Home() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top">
+      {/* <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container-fluid">
           <div className="row w-100 justify-content-center">
             <div className="col-12 col-lg-9 col-xl-8">
@@ -121,21 +121,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
+
+    
 
       {/* Hero Section */}
-      <section className="hero w-100">
+      <section className="hero">
         <div className="heroContent">
           <h3 className="heroTitle">
             Find <span className="highlight">peace</span> in your nook.
-            <div className="brainIcon">
+            {/* <div className="brainIcon">
               <Image
                 src="/images/brain-icon.png"
                 alt="Brain Icon"
                 width={100}
                 height={100}
               />
-            </div>
+            </div> */}
           </h3>
 
           <p className="heroSubtitle">
@@ -143,7 +145,7 @@ export default function Home() {
             work with confidence and peace.
           </p>
           <Link href="#contact-us">
-            <button className="contactBtn">
+            <button className="contactBtn mx-auto">
               <span className="me-2">Contact Us</span>
               <i className="bi bi-box-arrow-right fs-5"></i>
             </button>
@@ -232,7 +234,7 @@ export default function Home() {
             </div>
             <h2 className="mt-5 fw-bold">Nook customers come from</h2>
           </div>
-          <div className="">
+          <div>
             <Slider {...settings}>
               <div className="">
                 <Image
@@ -308,10 +310,10 @@ export default function Home() {
                       <div className="formGroup">
                         <input
                           className="form-control fw-bold"
-                           name="name"
+                          name="name"
                           type="text"
                           placeholder="Name*"
-                          onChange={handleChange} 
+                          onChange={handleChange}
                           required
                         />
                       </div>
@@ -321,7 +323,7 @@ export default function Home() {
                           type="email"
                           placeholder="Email*"
                           name="email"
-                          onChange={handleChange} 
+                          onChange={handleChange}
                           required
                         />
                       </div>
@@ -331,7 +333,7 @@ export default function Home() {
                           type="tel"
                           placeholder="Contact number*"
                           name="contact"
-                          onChange={handleChange} 
+                          onChange={handleChange}
                           required
                         />
                       </div>
@@ -341,7 +343,7 @@ export default function Home() {
                           type="text"
                           placeholder="Company name"
                           name="company"
-                          onChange={handleChange} 
+                          onChange={handleChange}
                         />
                       </div>
                       <div className="formGroup">
@@ -350,12 +352,11 @@ export default function Home() {
                           type="text"
                           placeholder="Country"
                           name="country"
-                          onChange={handleChange} 
+                          onChange={handleChange}
                         />
                       </div>
                       <button
-                      onClick={handleEmail}
-                     
+                        onClick={handleEmail}
                         type="submit"
                         className="submitBtn text-decoration-none"
                       >
@@ -389,7 +390,10 @@ export default function Home() {
               <span className="purple">Join our newsletter</span> for <br />{" "}
               tips on well-being.
             </h2>
-            <button className="subscribeBtn">
+            <button
+              className="subscribeBtn  mx-auto"
+              onClick={() => setShowSubscribeModal(true)}
+            >
               <span className="me-2">Subscribe </span>
               <i className="bi bi-box-arrow-right fs-5"></i>
             </button>
@@ -465,7 +469,7 @@ export default function Home() {
                 />
               </Link>
             </div>
-
+            {/* 
             <div className="contactInfo">
               <div className="contactItem">
                 <div className="contact-icon rounded-circle">
@@ -498,7 +502,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <hr className="footer-divider" />
@@ -524,6 +528,12 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      {showSubscribeModal && (
+        <SubscibeModal
+          showSubscribeModal={showSubscribeModal}
+          setShowSubscribeModal={setShowSubscribeModal}
+        />
+      )}
     </>
   );
 }

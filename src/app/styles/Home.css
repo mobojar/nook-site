@@ -1,5 +1,6 @@
 /* Global Styles */
- .container-new {
+
+ /* .container-new {
     width: 100%;
     overflow-x: hidden;
   } 
@@ -30,9 +31,9 @@
     padding: 0;
   }
 
-  /* .row {
+  .row {
     margin: 0;
-  } */
+  }
 
   .container-fluid {
     padding: 0;
@@ -50,6 +51,24 @@
     
   }
   
+
+  */
+
+  .navbar{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 1000;
+  }
+
+  .logo{
+    object-fit: contain;
+  }
+  .dropdown-center {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
+
   .loginBtn {
     background-color: #ffa500;
     color: white;
@@ -57,21 +76,23 @@
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius:25px;
-    padding: 12px 45px;
+    padding: 12px 35px;
     font-weight: 600;
     transition: all 0.3s ease;
   }
   
   .loginBtn:hover {
     background-color: #e69500;
-  }
-  
+  } 
+    
+
   /* Hero Section */
   .hero {
     background-image: url("/images/hero-bg.png");
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    /* height: 90vh; */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,6 +141,9 @@
   }
   
   .contactBtn {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
     background-color: #ffa500;
     color: white;
     border: none;
@@ -129,6 +153,11 @@
     padding: 15px 38px;
     font-weight: 600;
     transition: all 0.3s ease;
+    white-space: nowrap; 
+  }
+
+   a  {
+    text-decoration: none !important;
   }
   
   .contactBtn:hover {
@@ -138,89 +167,22 @@
   
   .brainIcon {
     position: absolute;
-    right: -30;
-    top: -40;
+    /* right: -30;
+    top: -40; */
     z-index: 2;
-  }
-  
-  /* Best Self Section */
-  /* .bestSelf {
-    padding: 100px 0;
-    background-color: #f8f9fa;
-  }
-  
-  .bestSelf-right-section{
-    background:#5E5CE61A;
-    padding: 20px;
-    border-radius: 10px;
+
   }
 
-  .sectionTitle {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-    line-height: 1.2;
-  }
-  
-  .purple {
-    color: #6366f1;
-  }
-  
-  .sectionText {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  .imageGrid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .imageTop {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  .imageBottom {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .imageBottom > div {
-    width: 50%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  .gridImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .gridImage:hover {
-    transform: scale(1.05);
-  }
-   */
 
    .bestSelf {
     margin-top: 20px;
-    /* background-color: #f8f9fa; */
   }
   
   .bestSelf-content {
-    /* padding-right: -30px; */
     border-radius: 10px;
     background: linear-gradient(to bottom right, #f0f0ff, #f5f5ff);
     box-shadow: 0 4px 15px rgba(94, 92, 230, 0.05);
     height: 50%;
-    /* margin-right: 10px; */
   }
   
   .sectionTitle {
@@ -243,11 +205,8 @@
   .image-gallery {
     display: flex;
     gap: 20px;
-    /* height: 100%; */
     margin-left: -4em;
     margin-top: 2em;
-    /* margin-top: 3em; */
-    /* overflow-x: hidden; */
 
   }
   
@@ -350,27 +309,6 @@
     margin-top: 10px;
   }
   
-  .logoGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  .logoItem {
-    flex: 0 0 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    object-fit: contain;
-  }
-  
-  .logoItem:hover {
-    filter: grayscale(0);
-    opacity: 1;
-  }
   
   /* Contact Section */
 
@@ -449,7 +387,9 @@
     transition: all 0.3s ease;
     margin-top: 10px;
 
-
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
     
   }
   
@@ -508,6 +448,9 @@
     transition: all 0.3s ease;
     align-items: center;
     margin-bottom: -1em;
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
   }
   
   .subscribeBtn:hover {
@@ -671,8 +614,7 @@
     .heroTitle {
       font-size: 2.3rem;
     }
-
-    
+   
     .brainIconSmall{
       width: 50;
     }
@@ -778,13 +720,7 @@
       width: 100%;
     }
   
-    .logoGrid {
-      gap: 20px;
-    }
   
-    .logoItem {
-      flex: 0 0 120px;
-    }
   }
 
   @media (min-width: 991.98px) and (max-width: 1480px) {
