@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
                 <div className={styles.policySection}>
                   <h2 className={styles.policyTitle}>1. Who We Are</h2>
                   <p>
-                    Nook ("we," "us," or "our") is a mobile app designed to provide a science-based well-being solution
+                    Nook (&quot;we&quot;, &quot;us&quot;, or &apos;our&apos;) is a mobile app designed to provide a science-based well-being solution
                     to help you navigate life and work with confidence and peace. If you have questions about this
                     policy or your rights, contact us at:
                   </p>
@@ -144,7 +144,7 @@ export default function PrivacyPolicy() {
                       <strong>PIPL (China):</strong> Ensuring strict measures for personal data protection in China.
                     </li>
                     <li>
-                      <strong>India's DPDPA:</strong> Adhering to localization and cross-border transfer rules in India.
+                      <strong>India&apos;s DPDPA:</strong> Adhering to localization and cross-border transfer rules in India.
                     </li>
                   </ul>
                   <p>
@@ -230,7 +230,7 @@ export default function PrivacyPolicy() {
                   <h2 className={styles.policyTitle}>10. Updates to This Policy</h2>
                   <p>
                     We may update this Privacy Policy periodically to reflect changes in our practices or legal
-                    requirements worldwide (e.g., GDPR updates in Europe, CCPA/CPRA changes in California). We'll notify
+                    requirements worldwide (e.g., GDPR updates in Europe, CCPA/CPRA changes in California). We&apos;ll notify
                     you of significant updates via email or in-app notifications.
                   </p>
                 </div>

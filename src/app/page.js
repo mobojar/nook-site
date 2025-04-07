@@ -76,16 +76,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="heroContent">
-          <h3 className="heroTitle">
+          <h3 className="heroTitle d-flex  align-items-center">
             Find <span className="highlight">peace</span> in your nook.
-            {/* <div className="brainIcon">
+            <div className="brainIcon">
               <Image
                 src="/images/brain-icon.png"
                 alt="Brain Icon"
                 width={100}
                 height={100}
+                className="img-fluid"
               />
-            </div> */}
+            </div>
           </h3>
 
           <p className="heroSubtitle">

@@ -169,14 +169,14 @@ export default function Cookies() {
                     <li>
                       <strong>Google Analytics:</strong> For performance tracking and analytics (
                       <a href="#" className={styles.cookieLink}>
-                        Google's Privacy Policy
+                        Google&apos;s Privacy Policy
                       </a>
                       ).
                     </li>
                     <li>
                       <strong>Facebook Pixel:</strong> For targeted advertising (
                       <a href="#" className={styles.cookieLink}>
-                        Facebook's Privacy Policy
+                        Facebook&apos;s Privacy Policy
                       </a>
                       ).
                     </li>
@@ -195,8 +195,8 @@ export default function Cookies() {
 
                   <h3 className={styles.cookieSubtitle}>a. Managing Cookies in the App</h3>
                   <p>
-                    You can manage your cookie preferences through the settings menu in the Nook app under "Privacy
-                    Settings." You can choose to accept all cookies, reject non-essential cookies, or customize which
+                    You can manage your cookie preferences through the settings menu in the Nook app under &quot;Privacy
+                    Settings.&quot;" You can choose to accept all cookies, reject non-essential cookies, or customize which
                     types of cookies you allow.
                   </p>
 
@@ -225,12 +225,12 @@ export default function Cookies() {
                         https://support.apple.com/en-us/HT201265
                       </a>
                     </li>
-                    <li>For Android devices: Check your browser settings under "Privacy."</li>
+                    <li>For Android devices: Check your browser settings under &quot;Privacy.&quot;</li>
                   </ul>
                   <p>Please note that disabling certain cookies may impact the functionality of the app.</p>
 
                   <h3 className={styles.cookieSubtitle}>c. Opting Out of Targeted Advertising</h3>
-                  <p>You can opt out of personalized ads by adjusting your device's ad settings or using tools like:</p>
+                  <p>You can opt out of personalized ads by adjusting your device&apos;s ad settings or using tools like:</p>
                   <ul className={styles.cookieList}>
                     <li>
                       <a href="#" className={styles.cookieLink}>
@@ -255,8 +255,8 @@ export default function Cookies() {
                     GDPR, CCPA, PIPL, and other global privacy laws.
                   </p>
                   <p>
-                    When you first use the Nook app, you'll see a cookie banner asking for your consent to use
-                    non-essential cookies. You can update your preferences at any time in the app's privacy settings.
+                    When you first use the Nook app, you&apos;ll see a cookie banner asking for your consent to use
+                    non-essential cookies. You can update your preferences at any time in the app&apos;s privacy settings.
                   </p>
                 </div>
 
@@ -264,7 +264,7 @@ export default function Cookies() {
                   <h2 className={styles.cookieTitle}>7. Updates to This Cookie Policy</h2>
                   <p>
                     We may update this Cookie Policy from time to time to reflect changes in our practices or legal
-                    requirements. We'll notify you of significant updates via email or in-app notifications.
+                    requirements. We&apos;ll notify you of significant updates via email or in-app notifications.
                   </p>
                   <p>
                     If you have any questions about this Cookie Policy or how we use cookies, please contact us at

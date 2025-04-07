@@ -28,7 +28,7 @@ export default function TermsAndCondition() {
               <div className={`${styles.termsCard} shadow`}>
                 <div className={styles.introText}>
                   <p>
-                    Welcome to Nook! These Terms and Conditions ("Terms") govern your use of the Nook website and mobile
+                    Welcome to Nook! These Terms and Conditions (&quot;Terms&quot;) govern your use of the Nook website and mobile
                     app. Please read them carefully before using our services. By accessing or using Nook, you agree to
                     these Terms. If you do not agree, please refrain from using our services.
                   </p>
@@ -37,7 +37,7 @@ export default function TermsAndCondition() {
                 <div className={styles.termSection}>
                   <h2 className={styles.termTitle}>1. Introduction</h2>
                   <p>
-                    <strong>Who We Are:</strong> Nook ("we," "us," or "our") provides a science-based well-being
+                    <strong>Who We Are:</strong> Nook (&quot;we&quot;, &quot;us&quot;, or &apos;our&apos;) provides a science-based well-being
                     solution to help you navigate life and work with confidence and peace.
                   </p>
                   <p>
@@ -48,14 +48,14 @@ export default function TermsAndCondition() {
                 <div className={styles.termSection}>
                   <h2 className={styles.termTitle}>2. Definitions</h2>
                   <p>
-                    <strong>"Services":</strong> Refers to the Nook website, mobile app, and any related features or
+                    <strong>&quot;Services&quot;:</strong> Refers to the Nook website, mobile app, and any related features or
                     content.
                   </p>
                   <p>
-                    <strong>"User":</strong> Any individual accessing or using our Services.
+                    <strong>&quot;User&quot;:</strong> Any individual accessing or using our Services.
                   </p>
                   <p>
-                    <strong>"Content":</strong> Includes text, images, videos, and other materials available on the
+                    <strong>&quot;Content&quot;:</strong> Includes text, images, videos, and other materials available on the
                     Services.
                   </p>
                 </div>
@@ -90,7 +90,7 @@ export default function TermsAndCondition() {
                   <ul className={styles.termsList}>
                     <li>Use the Services for unlawful purposes.</li>
                     <li>Harass, threaten, or abuse other users.</li>
-                    <li>Reverse-engineer or tamper with the Services' functionality.</li>
+                    <li>Reverse-engineer or tamper with the Services&apos; functionality.</li>
                     <li>Upload harmful content such as viruses or malware.</li>
                   </ul>
                 </div>
@@ -130,7 +130,7 @@ export default function TermsAndCondition() {
                 <div className={styles.termSection}>
                   <h2 className={styles.termTitle}>9. Disclaimer of Warranties</h2>
                   <p>
-                    The Services are provided "AS IS" and "AS AVAILABLE." We make no guarantees about their
+                    The Services are provided &quot;AS IS&quot; and &quot;AS AVAILABLE.&quot; We make no guarantees about their
                     availability, accuracy, or reliability and disclaim all warranties except those required by law.
                   </p>
                 </div>
