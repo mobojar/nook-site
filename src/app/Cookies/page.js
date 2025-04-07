@@ -196,7 +196,7 @@ export default function Cookies() {
                   <h3 className={styles.cookieSubtitle}>a. Managing Cookies in the App</h3>
                   <p>
                     You can manage your cookie preferences through the settings menu in the Nook app under &quot;Privacy
-                    Settings.&quot;" You can choose to accept all cookies, reject non-essential cookies, or customize which
+                    Settings.&quot; You can choose to accept all cookies, reject non-essential cookies, or customize which
                     types of cookies you allow.
                   </p>
 
