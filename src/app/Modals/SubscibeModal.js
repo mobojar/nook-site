@@ -1,8 +1,9 @@
-import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-import { BellIcon, XIcon, SendIcon } from "lucide-react";
 import "./subscribeModal.css";
+import { useState } from "react";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import { BellIcon, XIcon, SendIcon } from "lucide-react";
+
 const SubscibeModal = ({ showSubscribeModal, setShowSubscribeModal }) => {
   const handleClose = () => setShowSubscribeModal(false);
 
@@ -15,12 +16,10 @@ const SubscibeModal = ({ showSubscribeModal, setShowSubscribeModal }) => {
 
     setIsSubmitting(true)
 
-    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false)
       setIsSuccess(true)
 
-      // Reset after showing success message
       setTimeout(() => {
         setEmail("")
         setIsSuccess(false)
@@ -30,34 +29,6 @@ const SubscibeModal = ({ showSubscribeModal, setShowSubscribeModal }) => {
   }
   return (
     <>
-      {/* <Modal
-        show={showSubscribeModal}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header >
-          <Modal.Title>Subscribe 🎉</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-            <input type="email" className="form-control border-2" placeholder="Enter email address..."  required/>
-        </Modal.Body>
-        <Modal.Footer>
-
-          <Button variant="outline-primary" onClick={()=>
-          {
-            alert("Email submit successfully!")
-            handleClose()
-          } 
-
-          }>
-           Submit
-          </Button>
-          <Button variant="outline-secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
 
 <Modal
       show={showSubscribeModal}

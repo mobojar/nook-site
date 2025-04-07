@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "nook - Find peace in your nook",
@@ -17,6 +18,8 @@ export default function RootLayout({ children }) {
       <body>
       <Navbar />
         {children}
+        <Footer />
+
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         strategy="beforeInteractive"
         />

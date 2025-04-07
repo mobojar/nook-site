@@ -1,0 +1,332 @@
+/* Cookie Policy Page Styles - CSS Module */
+
+/* Container */
+.cookieContainer {
+    overflow-x: hidden;
+  }
+  
+  /* Hero Section */
+  .heroSection {
+    padding: 120px 0 0px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+      /* url("/placeholder.svg?height=800&width=1600") center / cover no-repeat; */
+    position: relative;
+  }
+  
+  /* .heroSection::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, white);
+  }
+   */
+  .heroTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .highlight {
+    color: #6366f1;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .highlight::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(99, 102, 241, 0.2);
+    z-index: -1;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.25rem;
+    color: #6b7280;
+    /* margin-bottom: 2rem; */
+  }
+  
+  /* Cookie Content */
+  .cookieContent {
+    /* padding: 60px 0 80px; */
+  }
+  
+  .cookieCard {
+    background-color: white;
+    border-radius: 16px;
+    padding: 3rem;
+    margin-bottom: 10em;
+
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
+  }
+  
+  .introText {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .cookieSection {
+    margin-bottom: 2.5rem;
+  }
+  
+  .cookieTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: #111827;
+  }
+  
+  .cookieSubtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+    color: #374151;
+  }
+  
+  .cookieSection p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  
+  .cookieSection strong {
+    color: #111827;
+    font-weight: 600;
+  }
+  
+  .cookieList {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cookieList li {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cookieLink {
+    color: #6366f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  .cookieLink:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+  }
+  
+  /* Cookie Type Cards */
+  .cookieTypeCard {
+    background-color: #f9fafb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cookieTypeCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cookieTypeHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .cookieTypeIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    margin-right: 1rem;
+  }
+  
+  .cookieTypeTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .cookieTypeContent {
+    padding-left: 3.5rem;
+  }
+  
+  .cookieTypeContent p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cookieTypeContent p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .cookieFooter {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-style: italic;
+  }
+  
+  /* Preferences Section */
+  .preferencesSection {
+    padding: 0 0 100px;
+  }
+  
+  .preferencesCard {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 16px;
+    padding: 2.5rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+  }
+  
+  .preferencesTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .preferencesText {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+  }
+  
+  .preferencesButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #6366f1;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .preferencesButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .buttonIcon {
+    margin-left: 0.5rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .heroTitle {
+      font-size: 2.75rem;
+    }
+  
+    .preferencesTitle {
+      font-size: 1.5rem;
+    }
+  
+    .heroSection {
+      /* padding: 80px 0 60px; */
+    }
+  
+    .cookieCard {
+      padding: 2rem;
+    }
+  
+    .cookieTypeCard {
+      padding: 1.25rem;
+    }
+  
+    .preferencesCard {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .heroTitle {
+      font-size: 2.25rem;
+    }
+  
+    .heroSubtitle {
+      font-size: 1.125rem;
+    }
+  
+    .preferencesTitle {
+      font-size: 1.25rem;
+    }
+  
+    .introText {
+      font-size: 1rem;
+    }
+  
+    .heroSection {
+      /* padding: 60px 0 40px; */
+    }
+  
+    .cookieContent {
+      /* padding: 40px 0 60px; */
+    }
+  
+    .cookieCard {
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+  
+    .cookieTitle {
+      font-size: 1.25rem;
+    }
+  
+    .cookieSubtitle {
+      font-size: 1.125rem;
+    }
+  
+    .cookieTypeHeader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cookieTypeIcon {
+      margin-bottom: 0.75rem;
+      margin-right: 0;
+    }
+  
+    .cookieTypeContent {
+      padding-left: 0;
+    }
+  
+    .preferencesCard {
+      padding: 1.5rem;
+      text-align: center;
+    }
+  }
+  
+  

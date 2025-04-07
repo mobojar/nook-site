@@ -2,69 +2,79 @@
 import '../styles/Home.css'
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
+import React, {useState} from 'react';
+import EmailModal from '../Modals/EmailModal';
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const pathname = usePathname()
+  const pathname = usePathname();
+
+  const [showEmailModal, setShowEmailModal] = useState(false);
 
   return (
+    <>
+          <nav className="navbar navbar-expand-lg bg-white shadow-lg fixed-top w-75 mx-auto px-4 p-2">
+      <div className="container nav-section ">
+        <Link className="navbar-brand" href="/">
+          <Image
+            src="/images/nook-logo.png"
+            alt="nook Logo"
+            className="img-fluid logo me-4"
+            height={50}
+            width={100}
+          />
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto  mb-lg-0">
+            <li className="nav-item fw-bold">
+              <Link
+                href="/"
+                className={`nav-link ${pathname === "/" ? "active" : ""}`}
+                style={{ color: pathname === "/" ? "#5E5CE6" : "" }}
+              >
+                What we do
+              </Link>
+            </li>
 
-      <nav className="navbar navbar-expand-lg bg-white shadow-lg fixed-top w-75 mx-auto px-4 p-3">
-        <div className="container nav-section ">
-          <Link className="navbar-brand" href="/">
-            <Image
-              src="/images/nook-logo.png"
-              alt="nook Logo"
-              className="img-fluid logo me-4"
-              height={50}
-              width={100}
-            />
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto  mb-lg-0">
-              <li className="nav-item fw-bold">
-                <Link
-                  href="/"
-                  className={`nav-link ${pathname === "/" ? "active" : ""}`}
-                  style={{ color: pathname === "/" ? "#5E5CE6" : "" }}
-                >
-                  What we do
-                </Link>
-              </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${pathname === "/AboutUs" ? "active" : ""}`}
+                href="/AboutUs"
+                style={{ color: pathname === "/AboutUs" ? "#5E5CE6" : "" }}
 
-              <li className="nav-item">
-                <Link 
-               className={`nav-link ${pathname === "/About-Us" ? "active" : ""}`}
-               href="/About-Us"
-               style={{ color: pathname === "/About-us" ? "#5E5CE6" : "" }}
-                
-                >
-                  About Us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Privacy Policy
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Terms & Condition
-                </a>
-              </li>
+              >
+                About Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link 
+               className={`nav-link ${pathname === "/PrivacyPolicy" ? "active" : ""}`}
+                href="/PrivacyPolicy"
+                style={{ color: pathname === "/PrivacyPolicy" ? "#5E5CE6" : "" }}
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${pathname === "/Terms&Conditions" ? "active" : ""}`}
+                href="/Terms&Conditions"
+                style={{ color: pathname === "/Terms&Conditions" ? "#5E5CE6" : "" }}>
+                Terms & Condition
+              </Link>
+            </li>
 
-              {/* <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
                 <a
                   className="nav-link "
                   href="#"
@@ -93,7 +103,7 @@ export default function Navbar() {
                 </ul>
               </li> */}
 
-              {/* <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -122,21 +132,28 @@ export default function Navbar() {
                 </ul>
               </li> */}
 
-            </ul>
+          </ul>
 
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <button className="loginBtn d-flex align-items-center">
-                <span className="me-2">Contact Us</span>
-                <i className="bi bi-box-arrow-right fs-5"></i>
-              </button>
-            </ul>
-            {/* <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form> */}
-          </div>
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <button className="loginBtn d-flex align-items-center" onClick={() => setShowEmailModal(true)}>
+              <span className="me-2">Download</span>
+              <i className="bi bi-box-arrow-down fs-5"></i>
+            </button>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
+
+    {
+      showEmailModal && (
+        <EmailModal 
+        showEmailModal={showEmailModal}
+        setShowEmailModal={setShowEmailModal}
+        />
+      )
+    }
+    </>
+
   )
 }
 

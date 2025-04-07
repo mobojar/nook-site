@@ -32,12 +32,12 @@ export default function Home() {
   var settings = {
     dots: false,
     infinite: true,
-    speed: 4000,
+    speed: 9000,
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 9000,
     arrows: false,
     cssEase: "linear",
     responsive: [
@@ -70,58 +70,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <nav className="navbar navbar-expand-lg fixed-top">
-        <div className="container-fluid">
-          <div className="row w-100 justify-content-center">
-            <div className="col-12 col-lg-9 col-xl-8">
-              <div className="d-flex navbar-container shadow-lg px-4 py-4 bg-white">
-                <Link href="/" className="logoLink mt-1 ps-3">
-                  <Image
-                    src="/images/nook-logo.png"
-                    alt="nook Logo"
-                    className="logo"
-                    height={100}
-                    width={100}
-                  />
-                </Link>
-                <button
-                  className="navbar-toggler ms-auto"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarNav"
-                >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                  <ul className="navbar-nav me-auto ms-5">
-                    <li className="nav-item fw-bold">
-                      <Link
-                        href="#what-we-do"
-                        className="nav-link"
-                        style={{ color: "#5E5CE6" }}
-                      >
-                        What we do
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        href="#contact-us"
-                        className="nav-link text-black fw-semibold"
-                      >
-                        Contact Us
-                      </Link>
-                    </li>
-                  </ul>
-                  <button className="loginBtn d-flex align-items-center">
-                    <span className="me-2">Contact Us</span>
-                    <i className="bi bi-box-arrow-right fs-5"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav> */}
 
     
 
@@ -159,17 +107,17 @@ export default function Home() {
             <div className="col-lg-7 bestSelf-content p-5">
               <h2 className="sectionTitle">
                 Everyone deserves to be{" "}
-                <span className="purple">their best self</span> at work and in
+                <span className="purple">their <br/> best self</span> at work and in
                 life.
               </h2>
               <div className="sectionText">
-                <p className="me-5">
+                <p>
                   We&apos;ve all tried to improve our well-being. But we know
                   it&apos;s not always as easy as it seems, and we can do with a
                   bit of help, in the comfort of our Nook, our own little corner
                   of the world.
                 </p>
-                <p className="me-3">
+                <p>
                   Nook is a science based solution. That&apos;s a given. But we
                   are more than that. We know it&apos;s hard to watch yet
                   another meditation video, and just listening to sleep stories
@@ -401,133 +349,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="container-footer position-relative">
-          <div className="footer-bg-image"></div>
-          <hr className="footer-divider" />
-
-          <div className="footer-main">
-            <div className="socialIcons">
-              <Link
-                href="https://x.com/?lang=en"
-                target="_blank"
-                className="socialIcon"
-              >
-                <Image
-                  src="/images/icon-x.png"
-                  alt="X"
-                  width={16}
-                  height={16}
-                />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/"
-                target="_blank"
-                className="socialIcon"
-              >
-                <Image
-                  src="/images/icon-linkedin.png"
-                  alt="LinkedIn"
-                  width={16}
-                  height={16}
-                />
-              </Link>
-              <Link
-                href="https://www.facebook.com/"
-                target="_blank"
-                className="socialIcon"
-              >
-                <Image
-                  src="/images/icon-facebook.png"
-                  alt="Facebook"
-                  width={16}
-                  height={16}
-                />
-              </Link>
-              <Link
-                href="https://www.instagram.com/"
-                target="_blank"
-                className="socialIcon"
-              >
-                <Image
-                  src="/images/icon-instagram.png"
-                  alt="Instagram"
-                  width={16}
-                  height={16}
-                />
-              </Link>
-              <Link
-                href="https://www.youtube.com/"
-                target="_blank"
-                className="socialIcon"
-              >
-                <Image
-                  src="/images/icon-youtube.png"
-                  alt="YouTube"
-                  width={16}
-                  height={16}
-                />
-              </Link>
-            </div>
-            {/* 
-            <div className="contactInfo">
-              <div className="contactItem">
-                <div className="contact-icon rounded-circle">
-                  <i className="bi bi-telephone-fill text-dark p-2"></i>
-                </div>
-                <div className="contact-text">
-                  <span>Call</span>
-                  <p className="text-black fw-semibold">000-000-0000</p>
-                </div>
-              </div>
-
-              <div className="contactItem">
-                <div className="contact-icon rounded-circle">
-                  <i className="bi bi-envelope-fill text-dark p-2"></i>
-                </div>
-                <div className="contact-text">
-                  <span>Email</span>
-                  <p className="text-black fw-semibold">Email@nook.com</p>
-                </div>
-              </div>
-
-              <div className="contactItem">
-                <div className="contact-icon rounded-circle">
-                  <i className="bi bi-geo-alt-fill text-dark p-2"></i>
-                </div>
-                <div className="contact-text">
-                  <span>Address</span>
-                  <p className="text-black fw-semibold">
-                    000 Newbury St, 6th Floor,Boston, MA 00000
-                  </p>
-                </div>
-              </div>
-            </div> */}
-          </div>
-
-          <hr className="footer-divider" />
-
-          <div className="footerBottom">
-            <p className="text-dark fw-semibold">
-              © 2024 nook. All rights reserved.
-            </p>
-            <div className="footerLinks">
-              <Link href="#" className="text-dark fw-semibold">
-                {" "}
-                <u>Privacy Policy</u>{" "}
-              </Link>
-              <Link href="#" className="text-dark fw-semibold">
-                {" "}
-                <u>Terms of Service</u>{" "}
-              </Link>
-              <Link href="#" className="text-dark fw-semibold">
-                {" "}
-                <u> Cookies Settings</u>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
       {showSubscribeModal && (
         <SubscibeModal
           showSubscribeModal={showSubscribeModal}
