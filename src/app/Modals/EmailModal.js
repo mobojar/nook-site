@@ -1,7 +1,8 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import styles from './EmailModal.module.css'; // Import your CSS module
+import styles from './EmailModal.module.css';
 export default function EmailModal({ showEmailModal, setShowEmailModal }) {
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -103,13 +104,32 @@ export default function EmailModal({ showEmailModal, setShowEmailModal }) {
           <div className={`${styles.iconContainer} mb-3`}>
 
             <div className='d-flex mx-auto justify-content-center align-items-center'>
-              <div className={`${styles.iconCircle} me-3`}>
-                <i className="bi bi-google-play fs-2 "></i>
+              <div className={`${styles.iconCircle}`}>
+                {/* <i className="bi bi-google-play fs-2"></i> */}
+                <Image
+                  src="/images/google-play.png"
+                  alt="Google Play Store"
+                  width={40}
+                  height={40}
+                  className={`${styles.icon}  img-fluid`}
+
+                />
+
+                <Image
+                  src="/images/app-store.png"
+                  alt="app Store"
+                  width={45}
+                  height={45}
+                  className={`${styles.icon}  img-fluid`}
+
+                />
+
+                {/* <i className="bi bi-apple fs-2"></i> */}
+
               </div>
 
-              <div className={styles.iconCircle}>
-                <i className="bi bi-apple fs-2"></i>
-              </div>
+              {/* <div className={styles.iconCircle}>
+              </div> */}
             </div>
 
 
