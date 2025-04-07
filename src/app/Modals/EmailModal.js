@@ -100,25 +100,22 @@ export default function EmailModal({ showEmailModal, setShowEmailModal }) {
         </Modal.Header>
 
         <Modal.Body className={styles.modalBody}>
-          <div className={styles.iconContainer}>
-            <div className={styles.iconCircle}>
-              {/* <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg> */}
-                 <i className="bi bi-google-play fs-2"></i>
+          <div className={`${styles.iconContainer} mb-3`}>
+
+            <div className='d-flex mx-auto justify-content-center align-items-center'>
+              <div className={`${styles.iconCircle} me-3`}>
+                <i className="bi bi-google-play fs-2 "></i>
+              </div>
+
+              <div className={styles.iconCircle}>
+                <i className="bi bi-apple fs-2"></i>
+              </div>
             </div>
+
+
           </div>
+
+
 
           {/* <h3 className={styles.modalTitle}>Email</h3> */}
 
