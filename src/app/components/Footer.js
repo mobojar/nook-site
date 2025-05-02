@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <>
-    
-    <footer className="footer">
+
+      <footer className="footer">
         <div className="container-footer position-relative">
           <div className="footer-bg-image"></div>
           <hr className="footer-divider" />
@@ -73,7 +73,7 @@ export default function Footer() {
                 />
               </Link>
             </div>
-            
+
             <div className="contactInfo">
               {/* <div className="contactItem">
                 <div className="contact-icon rounded-circle">
@@ -107,30 +107,35 @@ export default function Footer() {
                 </div>
               </div> */}
 
-<div className="footerLinks">
-              <Link href="/PrivacyPolicy" className="text-dark fw-semibold">
-                {" "}
-                <u>Privacy Policy</u>{" "}
-              </Link>
-              <Link href="/Terms&Conditions" className="text-dark fw-semibold">
-                {" "}
-                <u>Terms & Conditions</u>{" "}
-              </Link>
-              <Link href="/Cookies" className="text-dark fw-semibold">
-                {" "}
-                <u> Cookies Settings</u>
-              </Link>
-            </div>
+              <div className="footerLinks">
+                <Link href="/PrivacyPolicy" className="text-dark fw-semibold">
+                  {" "}
+                  <u>Privacy Policy</u>{" "}
+                </Link>
+                <Link href="/Terms&Conditions" className="text-dark fw-semibold">
+                  {" "}
+                  <u>Terms & Conditions</u>{" "}
+                </Link>
+                <Link href="/Cookies" className="text-dark fw-semibold">
+                  {" "}
+                  <u> Cookies Settings</u>
+                </Link>
+
+                <Link href="/DataDeletion" className="text-dark fw-semibold">
+                  {" "}
+                  <u> Data Deletion</u>
+                </Link>
+              </div>
             </div>
           </div>
-          
+
           <hr className="footer-divider" />
 
           <div className="footerBottom d-flex justify-content-center">
             <p className="text-dark fw-semibold">
-              © 2024 nook. All rights reserved.
+              © 2025 nook. All rights reserved.
             </p>
-         
+
           </div>
         </div>
       </footer>
